@@ -1,16 +1,20 @@
-# This is a sample Python script.
+from PyQt5.QtWidgets import QMainWindow
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class image_processing_class(QMainWindow):
+    def __init__(self):
+        from PyQt5.uic import loadUi
+        super(image_processing_class, self).__init__()
+        loadUi('image_processing_app.ui', self)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def image_processing_app():
+    import sys
+    from PyQt5.QtWidgets import QApplication
+    app = QApplication(sys.argv)
+    window = image_processing_class()
+    window.show()
+    app.exec()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+if __name__ == "__main__":
+    image_processing_app()
