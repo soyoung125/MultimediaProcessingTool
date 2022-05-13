@@ -15,9 +15,9 @@ class ImprovementTap():
         im_rotate = im.rotate(alpha)
         plt.figure(figsize=(5, 4)), plt.axis('off')
         plt.imshow(im_rotate, cmap='gray', vmin=0, vmax=1)
-        plt.savefig('invert.png')
+        plt.savefig('Rotate.png')
 
-        img2 = imread('invert.png')
+        img2 = imread('Rotate.png')
         self.show_image(self.lblImage2, img2)
 
     def show_Scaling(self):
@@ -35,7 +35,32 @@ class ImprovementTap():
 
         plt.figure(figsize=(5, 4)), plt.axis('off')
         plt.imshow(im_size, cmap='gray', vmin=0, vmax=1)
-        plt.savefig('invert.png')
+        plt.savefig('Scaling.png')
 
-        img2 = imread('invert.png')
+        img2 = imread('Scaling.png')
+        self.show_image(self.lblImage2, img2)
+
+    def show_Flip(self):
+        from PIL import Image
+        import matplotlib.pyplot as plt
+        from skimage.io import imread
+
+        im = Image.open(self.image_source)
+
+        direction = self.cbbImpFlip.currentText()
+
+        if direction == 'Top':
+            im_Flip = im.transpose(Image.FLIP_TOP_BOTTOM)
+        elif direction == 'Bottom':
+            im_Flip = im.transpose(Image.FLIP_TOP_BOTTOM)
+        elif direction == 'Left':
+            im_Flip = im.transpose(Image.FLIP_LEFT_RIGHT)
+        elif direction == 'Right':
+            im_Flip = im.transpose(Image.FLIP_LEFT_RIGHT)
+
+        plt.figure(figsize=(5, 4)), plt.axis('off')
+        plt.imshow(im_Flip)
+        plt.savefig('Flip.png')
+
+        img2 = imread('Flip.png')
         self.show_image(self.lblImage2, img2)

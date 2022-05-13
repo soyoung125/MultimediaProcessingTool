@@ -143,30 +143,20 @@
      <widget class="QComboBox" name="cbbImpFlip">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>363</x>
         <y>20</y>
-        <width>94</width>
+        <width>121</width>
         <height>22</height>
        </rect>
       </property>
       <item>
        <property name="text">
-        <string>Top</string>
+        <string>Top-Bottom</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Bottom</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Left</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Right</string>
+        <string>Left-Right</string>
        </property>
       </item>
      </widget>

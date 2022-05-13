@@ -13,6 +13,7 @@ class image_processing_class(QMainWindow):
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
         self.bntShowRotate.clicked.connect(lambda: ImprovementTap.show_Rotate(self))
         self.bntShowScaling.clicked.connect(lambda: ImprovementTap.show_Scaling(self))
+        self.bntshowFlip.clicked.connect(lambda: ImprovementTap.show_Flip(self))
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
