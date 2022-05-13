@@ -2,7 +2,7 @@ class ImprovementTap():
     def __init__(self):
         pass
 
-    def show_Rotate(self):
+    def show_rotate(self):
         from PIL import Image
         import matplotlib.pyplot as plt
         from skimage.io import imread
@@ -20,7 +20,7 @@ class ImprovementTap():
         img2 = imread('Rotate.png')
         self.show_image(self.lblImage2, img2)
 
-    def show_Scaling(self):
+    def show_scaling(self):
         from PIL import Image
         import matplotlib.pyplot as plt
         from skimage.io import imread
@@ -40,7 +40,7 @@ class ImprovementTap():
         img2 = imread('Scaling.png')
         self.show_image(self.lblImage2, img2)
 
-    def show_Flip(self):
+    def show_flip(self):
         from PIL import Image
         import matplotlib.pyplot as plt
         from skimage.io import imread
@@ -49,13 +49,9 @@ class ImprovementTap():
 
         direction = self.cbbImpFlip.currentText()
 
-        if direction == 'Top':
+        if direction == 'Top-Bottom':
             im_Flip = im.transpose(Image.FLIP_TOP_BOTTOM)
-        elif direction == 'Bottom':
-            im_Flip = im.transpose(Image.FLIP_TOP_BOTTOM)
-        elif direction == 'Left':
-            im_Flip = im.transpose(Image.FLIP_LEFT_RIGHT)
-        elif direction == 'Right':
+        elif direction == 'Left-Right':
             im_Flip = im.transpose(Image.FLIP_LEFT_RIGHT)
 
         plt.figure(figsize=(5, 4)), plt.axis('off')
@@ -63,4 +59,42 @@ class ImprovementTap():
         plt.savefig('Flip.png')
 
         img2 = imread('Flip.png')
+        self.show_image(self.lblImage2, img2)
+
+    def show_wrap(self):
+        import numpy as np
+        from PIL import Image
+        import math
+        import matplotlib.pyplot as plt
+        from skimage.io import imread
+
+        img = Image.open(self.image_source).convert("L")
+        img = np.array(img)
+        rows, cols = img.shape[0], img.shape[1]
+        img_output = np.zeros((rows, cols))
+
+        print(self.rbImpHorizontal.isChecked())
+
+        if self.rbImpHorizontal.isChecked():
+            for i in range(rows):
+                for j in range(cols):
+                    offset_x = int(40.0 * math.sin(2 * 3.14 * i / 180))
+                    if j + offset_x < rows:
+                        img_output[i, j] = img[i, (j + offset_x) % cols]
+                    else:
+                        img_output[i, j] = 0
+        elif self.rvImpVertical.isChecked():
+            for i in range(rows):
+                for j in range(cols):
+                    offset_y = int(40.0 * math.sin(2 * 3.14 * j / 180))
+                    if i + offset_y < rows:
+                        img_output[i, j] = img[(i + offset_y) % rows, j]
+                    else:
+                        img_output[i, j] = 0
+
+        plt.figure(figsize=(5, 4)), plt.axis('off')
+        plt.imshow(img_output, cmap='gray')
+        plt.savefig('Wrap.png')
+
+        img2 = imread('Wrap.png')
         self.show_image(self.lblImage2, img2)
