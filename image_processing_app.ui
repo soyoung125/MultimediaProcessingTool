@@ -45,7 +45,7 @@
      <attribute name="title">
       <string>Improvement</string>
      </attribute>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="lblImpAlpha">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -58,7 +58,7 @@
        <string>alpha(1,2,...)</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spAlpha">
+     <widget class="QSpinBox" name="spImpAlpha">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -68,7 +68,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntRotate">
+     <widget class="QPushButton" name="bntShowRotate">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -81,7 +81,7 @@
        <string>Rotate</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="lblImpX">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -94,7 +94,7 @@
        <string>X(0.0~1.0)</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="lblImpY">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -107,7 +107,7 @@
        <string>Y(0.0~1.0)</string>
       </property>
      </widget>
-     <widget class="QDoubleSpinBox" name="doubleSpinBox">
+     <widget class="QDoubleSpinBox" name="dsbImpX">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -117,7 +117,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+     <widget class="QDoubleSpinBox" name="dsbImpY">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -127,7 +127,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntScaling">
+     <widget class="QPushButton" name="bntShowScaling">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -140,7 +140,7 @@
        <string>Scaling</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="cbbImpFlip">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -170,7 +170,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="bntFlip">
+     <widget class="QPushButton" name="bntshowFlip">
       <property name="geometry">
        <rect>
         <x>500</x>
@@ -183,7 +183,7 @@
        <string>Flip</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="lblImpSt">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -201,7 +201,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;templete&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="rbImpHorizontal">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -214,7 +214,7 @@ p, li { white-space: pre-wrap; }
        <string>Horizontal</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="radioButton_2">
+     <widget class="QRadioButton" name="rvImpVertical">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -227,7 +227,7 @@ p, li { white-space: pre-wrap; }
        <string>vertical</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntWrap">
+     <widget class="QPushButton" name="bntShowWrap">
       <property name="geometry">
        <rect>
         <x>500</x>
@@ -259,7 +259,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="lblImage2">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>430</x>
         <y>180</y>
         <width>320</width>
         <height>310</height>
