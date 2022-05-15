@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>575</height>
+    <width>866</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>801</width>
-      <height>551</height>
+      <width>871</width>
+      <height>591</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -47,9 +47,9 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>140</y>
-        <width>320</width>
-        <height>310</height>
+        <y>129</y>
+        <width>351</width>
+        <height>321</height>
        </rect>
       </property>
       <property name="text">
@@ -62,10 +62,10 @@
      <widget class="QLabel" name="lblImage2_2">
       <property name="geometry">
        <rect>
-        <x>359</x>
-        <y>129</y>
-        <width>421</width>
-        <height>391</height>
+        <x>400</x>
+        <y>120</y>
+        <width>441</width>
+        <height>401</height>
        </rect>
       </property>
       <property name="text">
@@ -354,7 +354,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>798</width>
+     <width>866</width>
      <height>26</height>
     </rect>
    </property>
