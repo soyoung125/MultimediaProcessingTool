@@ -98,3 +98,12 @@ class ImprovementTap():
 
         img2 = imread('Wrap.png')
         self.show_image(self.lblImage2, img2)
+
+    def show_histogram(self):
+        from matplotlib import pyplot as plt
+        from skimage import io
+        plt.figure(figsize=(5,4))
+        plt.hist(self.source_image.ravel(), bins=256)
+        plt.savefig('hist.png')
+        hist_img =io.imread('hist.png')
+        self.show_image(self.lblImage2_2, hist_img)
