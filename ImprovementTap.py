@@ -104,6 +104,19 @@ class ImprovementTap():
         from skimage import io
         plt.figure(figsize=(5,4))
         plt.hist(self.source_image.ravel(), bins=256)
-        plt.savefig('hist.png')
-        hist_img =io.imread('hist.png')
-        self.show_image(self.lblImage2_2, hist_img)
+        plt.savefig('Hist.png')
+        img2 =io.imread('Hist.png')
+        self.show_image(self.lblImage2_2, img2)
+
+
+    def show_grayscale(self):
+        from skimage.color import rgb2gray
+        from skimage.io import imread
+        import matplotlib.pyplot as plt
+
+        gray_image = rgb2gray(self.source_image)
+        plt.figure(figsize=(5,4)), plt.axis('off')
+        plt.imshow(gray_image, cmap='gray', vmin=0, vmax=1)
+        plt.savefig('Invert.png')
+        img2 = imread('Invert.png')
+        self.show_image(self.lblImage2_2, img2)
