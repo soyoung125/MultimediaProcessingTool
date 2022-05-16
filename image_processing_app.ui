@@ -101,14 +101,43 @@
        <string>Grayscale</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QPushButton" name="btnSaveJPEG">
       <property name="geometry">
        <rect>
         <x>360</x>
         <y>10</y>
-        <width>104</width>
-        <height>41</height>
+        <width>93</width>
+        <height>28</height>
        </rect>
+      </property>
+      <property name="text">
+       <string>SaveJPEG</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSavePNG">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SavePNG</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveBMP">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SaveBMP</string>
       </property>
      </widget>
     </widget>

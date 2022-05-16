@@ -18,6 +18,10 @@ class image_processing_class(QMainWindow):
         self.bntShowWrap.clicked.connect(lambda: ImprovementTap.show_wrap(self))
         self.bntShowHistogram.clicked.connect(lambda: ImprovementTap.show_histogram(self))
         self.bntShowGrayscale.clicked.connect(lambda: ImprovementTap.show_grayscale(self))
+        self.btnSaveJPEG.clicked.connect(lambda: ImprovementTap.save_JPEG(self))
+        self.btnSavePNG.clicked.connect(lambda: ImprovementTap.save_PNG(self))
+        self.btnSaveBMP.clicked.connect(lambda: ImprovementTap.save_BMP(self))
+
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
