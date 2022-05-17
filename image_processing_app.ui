@@ -141,6 +141,89 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab_7">
+     <attribute name="title">
+      <string>Filter</string>
+     </attribute>
+     <widget class="QPushButton" name="btnFilterOpenImage">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open Image</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnBlur">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Blurring</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSmoothing">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Smoothing</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSharpening">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sharpening</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblImage1_F">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>331</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblImage2_F">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>110</y>
+        <width>331</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Enhance</string>
@@ -163,8 +246,8 @@
        <rect>
         <x>30</x>
         <y>120</y>
-        <width>351</width>
-        <height>441</height>
+        <width>350</width>
+        <height>440</height>
        </rect>
       </property>
       <property name="text">
@@ -176,8 +259,8 @@
        <rect>
         <x>470</x>
         <y>120</y>
-        <width>361</width>
-        <height>431</height>
+        <width>350</width>
+        <height>440</height>
        </rect>
       </property>
       <property name="text">
