@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow
 from ImprovementTap import ImprovementTap
+from TransformationTab import TransformationTab
 
 class image_processing_class(QMainWindow):
     def __init__(self):
@@ -9,6 +10,13 @@ class image_processing_class(QMainWindow):
         self.image_source = None
         self.source_image = None
 
+        # Tab transformation
+        self.bntShowHistogram.clicked.connect(lambda: TransformationTab.show_histogram(self))
+        self.bntShowGrayscale.clicked.connect(lambda: TransformationTab.show_grayscale(self))
+        self.btnSaveJPEG.clicked.connect(lambda: TransformationTab.save_JPEG(self))
+        self.btnSavePNG.clicked.connect(lambda: TransformationTab.save_PNG(self))
+        self.btnSaveBMP.clicked.connect(lambda: TransformationTab.save_BMP(self))
+
         # Tab improvement
         self.bntImpOpenImage_2.clicked.connect(lambda: self.open_image2())
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
@@ -16,11 +24,6 @@ class image_processing_class(QMainWindow):
         self.bntShowScaling.clicked.connect(lambda: ImprovementTap.show_scaling(self))
         self.bntshowFlip.clicked.connect(lambda: ImprovementTap.show_flip(self))
         self.bntShowWrap.clicked.connect(lambda: ImprovementTap.show_wrap(self))
-        self.bntShowHistogram.clicked.connect(lambda: ImprovementTap.show_histogram(self))
-        self.bntShowGrayscale.clicked.connect(lambda: ImprovementTap.show_grayscale(self))
-        self.btnSaveJPEG.clicked.connect(lambda: ImprovementTap.save_JPEG(self))
-        self.btnSavePNG.clicked.connect(lambda: ImprovementTap.save_PNG(self))
-        self.btnSaveBMP.clicked.connect(lambda: ImprovementTap.save_BMP(self))
 
 
     def open_image(self):
