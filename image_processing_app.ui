@@ -149,7 +149,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>30</y>
+        <y>70</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -161,8 +161,8 @@
      <widget class="QPushButton" name="btnBlur">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>30</y>
+        <x>150</x>
+        <y>20</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -174,8 +174,8 @@
      <widget class="QPushButton" name="btnSmoothing">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>30</y>
+        <x>520</x>
+        <y>20</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -187,8 +187,8 @@
      <widget class="QPushButton" name="btnSharpening">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>30</y>
+        <x>340</x>
+        <y>20</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -201,9 +201,9 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>110</y>
+        <y>140</y>
         <width>331</width>
-        <height>431</height>
+        <height>420</height>
        </rect>
       </property>
       <property name="text">
@@ -214,13 +214,26 @@
       <property name="geometry">
        <rect>
         <x>500</x>
-        <y>110</y>
+        <y>140</y>
         <width>331</width>
-        <height>431</height>
+        <height>420</height>
        </rect>
       </property>
       <property name="text">
        <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtSigma">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -270,7 +283,7 @@
      <widget class="QPushButton" name="btnhisto_equal">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>290</x>
         <y>30</y>
         <width>161</width>
         <height>31</height>
