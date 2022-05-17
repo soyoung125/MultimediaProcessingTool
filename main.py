@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow
 
 from EnhanceTap import EnhanceTap
+from FilterTap import FilterTap
 from ImprovementTap import ImprovementTap
 
 class image_processing_class(QMainWindow):
@@ -27,6 +28,10 @@ class image_processing_class(QMainWindow):
         # Tap Enhance
         self.btnehnopenimage.clicked.connect(lambda: self.open_image3())
         self.btnhisto_equal.clicked.connect(lambda: EnhanceTap.histogram_equalization(self))
+
+        # Tap Filter
+        self.btnFilterOpenImage.clicked.connect(lambda: self.open_image4())
+        self.btnBlur.clicked.connect(lambda: FilterTap.show_blur(self))
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
@@ -58,6 +63,17 @@ class image_processing_class(QMainWindow):
             self.image_source = fileName
             self.source_image = io.imread(fileName)
             self.show_image(self.lblImage1_E, self.source_image)
+        except Exception as e:
+            print('Error: {'.format(e))
+
+    def open_image4(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
+        fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(),'*.*')
+        try:
+            self.image_source = fileName
+            self.source_image = io.imread(fileName)
+            self.show_image(self.lblImage1_F, self.source_image)
         except Exception as e:
             print('Error: {'.format(e))
 
