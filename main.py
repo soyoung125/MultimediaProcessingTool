@@ -32,6 +32,7 @@ class image_processing_class(QMainWindow):
         # Tap Filter
         self.btnFilterOpenImage.clicked.connect(lambda: self.open_image4())
         self.btnBlur.clicked.connect(lambda: FilterTap.show_blur(self))
+        self.btnSmoothing.clicked.connect(lambda: FilterTap.show_smooth(self))
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
