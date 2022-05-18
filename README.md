@@ -15,3 +15,4 @@
     pip install '라이브러리명'
 사용한 라이브러리 리스트
 - PyQt5
+- opencv-contrib-python(cv2 오류 발생시 uninstall 하고 재설치)
