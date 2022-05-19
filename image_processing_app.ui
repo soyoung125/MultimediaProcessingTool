@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>918</width>
+    <width>887</width>
     <height>633</height>
    </rect>
   </property>
@@ -149,7 +149,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>70</y>
+        <y>60</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -161,10 +161,10 @@
      <widget class="QPushButton" name="btnBlur">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>740</x>
         <y>20</y>
-        <width>101</width>
-        <height>31</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="text">
@@ -174,10 +174,10 @@
      <widget class="QPushButton" name="btnSmoothing">
       <property name="geometry">
        <rect>
-        <x>520</x>
+        <x>40</x>
         <y>20</y>
-        <width>101</width>
-        <height>31</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="text">
@@ -187,10 +187,10 @@
      <widget class="QPushButton" name="btnSharpening">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>410</x>
         <y>20</y>
-        <width>101</width>
-        <height>31</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="text">
@@ -223,18 +223,76 @@
        <string>TextLabel</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>30</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sigma(0, 1...)</string>
+      </property>
+     </widget>
      <widget class="QTextEdit" name="txtSigma">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>630</x>
         <y>20</y>
-        <width>101</width>
-        <height>31</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
-      <property name="placeholderText">
-       <string/>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>30</y>
+        <width>56</width>
+        <height>12</height>
+       </rect>
       </property>
+      <property name="text">
+       <string>(1, 2, ...)</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbbSharp">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -554,7 +612,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>918</width>
+     <width>887</width>
      <height>21</height>
     </rect>
    </property>
