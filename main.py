@@ -112,14 +112,17 @@ class image_processing_class(QMainWindow):
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         cap = cv2.VideoCapture(fileName)
 
+        # 동영상 크기 조절 필요...
+        # cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+        # w = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+        # h = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+        # print("변환된 동영상 너비(가로) : {}, 높이(세로) : {}".format(w, h))
+
         while True:
             ret, self.image_source = cap.read()
             self.image_source = cv2.cvtColor(self.image_source, cv2.COLOR_BGR2RGB)
             self.show_image(self.lblVideo1, self.image_source)
-            # cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-            # w = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
-            # h = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-            # print("변환된 동영상 너비(가로) : {}, 높이(세로) : {}".format(w, h))
+
             cv2.waitKey(24)
         cap.release()
         cv2.destroyAllWindows()
