@@ -28,11 +28,11 @@ class image_processing_class(QMainWindow):
         self.bntShowHistogram.clicked.connect(lambda: TransformationTab.show_histogram(self))
         self.bntShowGrayscale.clicked.connect(lambda: TransformationTab.show_grayscale(self))
 
-        # # Tab Save
-        # self.bntsavOpenImage.clicked.connect(lambda: self.open_image5())
-        # self.btnSaveJPEG.clicked.connect(lambda: SaveTab.save_JPEG(self))
-        # self.btnSavePNG.clicked.connect(lambda: SaveTab.save_PNG(self))
-        # self.btnSaveBMP.clicked.connect(lambda: SaveTab.save_BMP(self))
+        # Tab Save
+        self.bntsavOpenImage.clicked.connect(lambda: self.open_image5())
+        self.btnSaveJPEG.clicked.connect(lambda: SaveTab.save_JPEG(self))
+        self.btnSavePNG.clicked.connect(lambda: SaveTab.save_PNG(self))
+        self.btnSaveBMP.clicked.connect(lambda: SaveTab.save_BMP(self))
 
         # Tap Enhance
         self.btnehnopenimage.clicked.connect(lambda: self.open_image3())
