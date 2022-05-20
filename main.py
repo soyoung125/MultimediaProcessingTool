@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QMainWindow
+import os
 
 from Tab.EnhanceTap import EnhanceTap
 from Tab.FilterTap import FilterTap
@@ -133,9 +134,19 @@ class image_processing_class(QMainWindow):
         cv2.destroyAllWindows()
 
 
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print('Error: Creating directory. ' + directory)
+
 def image_processing_app():
     import sys
     from PyQt5.QtWidgets import QApplication
+
+    createFolder('./Images')
+
     app = QApplication(sys.argv)
     window = image_processing_class()
     window.show()
