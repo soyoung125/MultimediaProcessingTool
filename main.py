@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QMainWindow
 from EnhanceTap import EnhanceTap
 from FilterTap import FilterTap
 from ImprovementTap import ImprovementTap
+from VideoTransformationTap import VideoTransformationTap
+
 
 class image_processing_class(QMainWindow):
     def __init__(self):
@@ -11,7 +13,7 @@ class image_processing_class(QMainWindow):
         loadUi('image_processing_app.ui', self)
         self.image_source = None
         self.source_image = None
-        self.source_video = None
+        self.video_source = None
 
         # Tab improvement
         self.bntImpOpenImage_2.clicked.connect(lambda: self.open_image2())
@@ -38,6 +40,7 @@ class image_processing_class(QMainWindow):
 
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
+        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_filp(self))
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
@@ -99,6 +102,7 @@ class image_processing_class(QMainWindow):
 
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         cap = cv2.VideoCapture(fileName)
+        self.video_source = fileName
 
         while True:
             ret, self.image_source = cap.read()
@@ -108,11 +112,9 @@ class image_processing_class(QMainWindow):
 
             cv2.waitKey(24)
 
-
         cap.release()
         cv2.destroyAllWindows()
 
-    # def show_video(self):
 
 def image_processing_app():
     import sys
