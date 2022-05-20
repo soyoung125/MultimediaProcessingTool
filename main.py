@@ -3,10 +3,9 @@ from PyQt5.QtWidgets import QMainWindow
 from EnhanceTap import EnhanceTap
 from FilterTap import FilterTap
 from ImprovementTap import ImprovementTap
+from VideoTransformationTap import VideoTransformationTap
 from TransformationTab import TransformationTab
 from SaveTab import SaveTab
-from VideoTransformationTap import VideoTransformationTap
-
 
 class image_processing_class(QMainWindow):
     def __init__(self):
@@ -18,7 +17,6 @@ class image_processing_class(QMainWindow):
         self.video_source = None
 
         # Tab improvement
-        self.bntImpOpenImage_2.clicked.connect(lambda: self.open_image2())
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
         self.bntShowRotate.clicked.connect(lambda: ImprovementTap.show_rotate(self))
         self.bntShowScaling.clicked.connect(lambda: ImprovementTap.show_scaling(self))
@@ -131,11 +129,9 @@ class image_processing_class(QMainWindow):
 
             cv2.waitKey(24)
 
-
         cap.release()
         cv2.destroyAllWindows()
 
-    # def show_video(self):
 
 def image_processing_app():
     import sys
