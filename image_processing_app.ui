@@ -612,7 +612,7 @@ p, li { white-space: pre-wrap; }
        <string>Open Video</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="cnndgrees">
       <property name="geometry">
        <rect>
         <x>350</x>
@@ -680,9 +680,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>480</x>
-        <y>270</y>
+        <y>200</y>
         <width>320</width>
-        <height>180</height>
+        <height>320</height>
        </rect>
       </property>
       <property name="text">
