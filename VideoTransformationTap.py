@@ -8,14 +8,14 @@ class VideoTransformationTap:
         video = cv2.VideoCapture(self.video_source)
 
         direction = self.cnndgrees.currentText()
-
+        print(2)
         if direction == '90':
             angle = 90.0
         elif direction == '180':
             angle = 180.0
         elif direction == '270':
             angle = 270.0
-
+        print(angle)
         while True:
             ret, video1 = video.read()
             video1 = cv2.cvtColor(video1, cv2.COLOR_BGR2RGB)
