@@ -10,7 +10,7 @@ class SaveTab():
 
         im = Image.open(self.image_source)
         plt.imshow(im)
-        plt.savefig('saveJPEG.jpeg')
+        im.save('saveJPEG.jpeg', "JPEG")
         img2 = imread('saveJPEG.jpeg')
         self.show_image(self.lblImage2_Save, img2)
 
@@ -22,7 +22,7 @@ class SaveTab():
 
         im = Image.open(self.image_source)
         plt.imshow(im)
-        plt.savefig('savePNG.png')
+        im.save('savePNG.png', "PNG")
         img2 = imread('savePNG.png')
         self.show_image(self.lblImage2_Save, img2)
 
