@@ -34,6 +34,6 @@ class SaveTab():
 
         im = Image.open(self.image_source)
         plt.imshow(im)
-        plt.savefig('saveBMP.bmp')
+        im.save('saveBMP.bmp', "BMP")
         img2 = imread('saveBMP.bmp')
         self.show_image(self.lblImage2_Save, img2)
