@@ -1,11 +1,11 @@
 from PyQt5.QtWidgets import QMainWindow
 
-from EnhanceTap import EnhanceTap
-from FilterTap import FilterTap
-from ImprovementTap import ImprovementTap
-from VideoTransformationTap import VideoTransformationTap
-from TransformationTab import TransformationTab
-from SaveTab import SaveTab
+from Tab.EnhanceTap import EnhanceTap
+from Tab.FilterTap import FilterTap
+from Tab.ImprovementTap import ImprovementTap
+from Tab.VideoTransformationTap import VideoTransformationTap
+from Tab.TransformationTab import TransformationTab
+from Tab.SaveTab import SaveTab
 
 class image_processing_class(QMainWindow):
     def __init__(self):
