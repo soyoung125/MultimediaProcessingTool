@@ -10,14 +10,13 @@ class ImprovementTap():
         im = Image.open(self.image_source)
 
         alpha = self.spImpAlpha.value()
-        print(alpha)
 
         im_rotate = im.rotate(alpha)
         plt.figure(figsize=(5, 4)), plt.axis('off')
         plt.imshow(im_rotate, cmap='gray', vmin=0, vmax=1)
-        plt.savefig('Rotate.png')
+        plt.savefig('./Images/Rotate.png')
 
-        img2 = imread('Rotate.png')
+        img2 = imread('./Images/Rotate.png')
         self.show_image(self.lblImage2, img2)
 
     def show_scaling(self):
@@ -35,9 +34,9 @@ class ImprovementTap():
 
         plt.figure(figsize=(5, 4)), plt.axis('off')
         plt.imshow(im_size, cmap='gray', vmin=0, vmax=1)
-        plt.savefig('Scaling.png')
+        plt.savefig('./Images/Scaling.png')
 
-        img2 = imread('Scaling.png')
+        img2 = imread('./Images/Scaling.png')
         self.show_image(self.lblImage2, img2)
 
     def show_flip(self):
@@ -56,9 +55,9 @@ class ImprovementTap():
 
         plt.figure(figsize=(5, 4)), plt.axis('off')
         plt.imshow(im_Flip)
-        plt.savefig('Flip.png')
+        plt.savefig('./Images/Flip.png')
 
-        img2 = imread('Flip.png')
+        img2 = imread('./Images/Flip.png')
         self.show_image(self.lblImage2, img2)
 
     def show_wrap(self):
@@ -72,8 +71,6 @@ class ImprovementTap():
         img = np.array(img)
         rows, cols = img.shape[0], img.shape[1]
         img_output = np.zeros((rows, cols))
-
-        print(self.rbImpHorizontal.isChecked())
 
         if self.rbImpHorizontal.isChecked():
             for i in range(rows):
@@ -94,7 +91,7 @@ class ImprovementTap():
 
         plt.figure(figsize=(5, 4)), plt.axis('off')
         plt.imshow(img_output, cmap='gray')
-        plt.savefig('Wrap.png')
+        plt.savefig('./Images/Wrap.png')
 
-        img2 = imread('Wrap.png')
+        img2 = imread('./Images/Wrap.png')
         self.show_image(self.lblImage2, img2)

@@ -15,8 +15,8 @@ class EnhanceTap():
         plt.figure(figsize=(4, 5))
         plt.axis('off')
         plt.imshow(im_equalization)
-        plt.savefig('Histogram_Equalization.png')
+        plt.savefig('./Images/Histogram_Equalization.png')
 
-        img2 = imread('Histogram_Equalization.png')
+        img2 = imread('./Images/Histogram_Equalization.png')
         self.show_image(self.lblImage2_E, img2)
 

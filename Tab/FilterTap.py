@@ -13,9 +13,9 @@ class FilterTap():
         plt.figure(figsize=(4, 5))
         plt.axis('off')
         plt.imshow(im_blur)
-        plt.savefig('BlurImage.png')
+        plt.savefig('./Images/BlurImage.png')
 
-        img2 = imread('BlurImage.png')
+        img2 = imread('./Images/BlurImage.png')
         self.show_image(self.lblImage2_F, img2)
 
     def show_smooth(self):
@@ -33,9 +33,9 @@ class FilterTap():
         plt.figure(figsize=(4, 5))
         plt.axis('off')
         plt.imshow(im_smooth)
-        plt.savefig('SmoothImage.png')
+        plt.savefig('./Images/SmoothImage.png')
 
-        img2 = imread('SmoothImage.png')
+        img2 = imread('./Images/SmoothImage.png')
 
         self.show_image(self.lblImage2_F, img2)
 
@@ -70,8 +70,8 @@ class FilterTap():
         plt.figure(figsize=(4, 5))
         plt.axis('off')
         plt.imshow(im_sharp)
-        plt.savefig('SharpImage.png')
+        plt.savefig('./Images/SharpImage.png')
 
-        img2 = imread('SharpImage.png')
+        img2 = imread('./Images/SharpImage.png')
 
         self.show_image(self.lblImage2_F, img2)
