@@ -65,25 +65,6 @@ class FilterTap():
         elif direction == '9':
             sharpening_mask = np.array([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]])
 
-        # sharpening_mask = np.array([[0 for j in range(3)] for i in range(3)])
-        # nsum = 0
-        # sigma_sharp = int(self.txtSharp.toPlainText())
-        # sharpening_mask[1][1] = sigma_sharp
-        #
-        # for i in range(0, 2):
-        #     for j in range(0, 2):
-        #         nsum = nsum + sharpening_mask[i][j]
-        #
-        # while nsum != 1:
-        #     sharpening_mask[1][0] = sharpening_mask[1][0] - 1
-        #     sharpening_mask[1][2] = sharpening_mask[1][2] - 1
-        #     sharpening_mask[0][1] = sharpening_mask[0][1] - 1
-        #     sharpening_mask[2][1] = sharpening_mask[2][1] - 1
-        #     sharpening_mask[0][0] = sharpening_mask[0][0] - 1
-        #     sharpening_mask[0][2] = sharpening_mask[0][2] - 1
-        #     sharpening_mask[2][0] = sharpening_mask[2][0] - 1
-        #     sharpening_mask[2][2] = sharpening_mask[2][2] - 1
-
         im_sharp = cv2.filter2D(img, -1, sharpening_mask)
 
         plt.figure(figsize=(4, 5))
