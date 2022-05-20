@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QMainWindow
 from EnhanceTap import EnhanceTap
 from FilterTap import FilterTap
 from ImprovementTap import ImprovementTap
+from TransformationTab import TransformationTab
+from SaveTab import SaveTab
 
 class image_processing_class(QMainWindow):
     def __init__(self):
@@ -14,17 +16,22 @@ class image_processing_class(QMainWindow):
         self.source_video = None
 
         # Tab improvement
-        self.bntImpOpenImage_2.clicked.connect(lambda: self.open_image2())
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
         self.bntShowRotate.clicked.connect(lambda: ImprovementTap.show_rotate(self))
         self.bntShowScaling.clicked.connect(lambda: ImprovementTap.show_scaling(self))
         self.bntshowFlip.clicked.connect(lambda: ImprovementTap.show_flip(self))
         self.bntShowWrap.clicked.connect(lambda: ImprovementTap.show_wrap(self))
-        self.bntShowHistogram.clicked.connect(lambda: ImprovementTap.show_histogram(self))
-        self.bntShowGrayscale.clicked.connect(lambda: ImprovementTap.show_grayscale(self))
-        self.btnSaveJPEG.clicked.connect(lambda: ImprovementTap.save_JPEG(self))
-        self.btnSavePNG.clicked.connect(lambda: ImprovementTap.save_PNG(self))
-        self.btnSaveBMP.clicked.connect(lambda: ImprovementTap.save_BMP(self))
+
+        # Tab Transformation
+        self.bntTransOpenImage.clicked.connect(lambda: self.open_image2())
+        self.bntShowHistogram.clicked.connect(lambda: TransformationTab.show_histogram(self))
+        self.bntShowGrayscale.clicked.connect(lambda: TransformationTab.show_grayscale(self))
+
+        # Tab Save
+        self.bntsavOpenImage.clicked.connect(lambda: self.open_image5())
+        self.btnSaveJPEG.clicked.connect(lambda: SaveTab.save_JPEG(self))
+        self.btnSavePNG.clicked.connect(lambda: SaveTab.save_PNG(self))
+        self.btnSaveBMP.clicked.connect(lambda: SaveTab.save_BMP(self))
 
         # Tap Enhance
         self.btnehnopenimage.clicked.connect(lambda: self.open_image3())
@@ -80,6 +87,17 @@ class image_processing_class(QMainWindow):
             self.image_source = fileName
             self.source_image = io.imread(fileName)
             self.show_image(self.lblImage1_F, self.source_image)
+        except Exception as e:
+            print('Error: {'.format(e))
+
+    def open_image5(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
+        fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
+        try:
+            self.image_source = fileName
+            self.source_image = io.imread(fileName)
+            self.show_image(self.lblImage1_Save, self.source_image)
         except Exception as e:
             print('Error: {'.format(e))
 
