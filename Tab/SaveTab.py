@@ -10,8 +10,8 @@ class SaveTab():
 
         im = Image.open(self.image_source)
         plt.imshow(im)
-        im.save('saveJPEG.jpeg', "JPEG")
-        img2 = imread('saveJPEG.jpeg')
+        im.save('./Images/saveJPEG.jpeg', "JPEG")
+        img2 = imread('./Images/saveJPEG.jpeg')
         self.show_image(self.lblImage2_Save, img2)
 
 
@@ -22,8 +22,8 @@ class SaveTab():
 
         im = Image.open(self.image_source)
         plt.imshow(im)
-        im.save('savePNG.png', "PNG")
-        img2 = imread('savePNG.png')
+        im.save('./Images/savePNG.png', "PNG")
+        img2 = imread('./Images/savePNG.png')
         self.show_image(self.lblImage2_Save, img2)
 
 
@@ -34,6 +34,6 @@ class SaveTab():
 
         im = Image.open(self.image_source)
         plt.imshow(im)
-        im.save('saveBMP.bmp', "BMP")
-        img2 = imread('saveBMP.bmp')
+        im.save('./Images/saveBMP.bmp', "BMP")
+        img2 = imread('./Images/saveBMP.bmp')
         self.show_image(self.lblImage2_Save, img2)
