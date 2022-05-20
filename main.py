@@ -107,23 +107,19 @@ class image_processing_class(QMainWindow):
     def open_video(self):
         import cv2
         from PyQt5 import QtWidgets, QtCore
-        from skimage import io
 
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         cap = cv2.VideoCapture(fileName)
 
-        # 동영상 크기 조절 필요...
-        # cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-        # w = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
-        # h = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-        # print("변환된 동영상 너비(가로) : {}, 높이(세로) : {}".format(w, h))
-
         while True:
             ret, self.image_source = cap.read()
             self.image_source = cv2.cvtColor(self.image_source, cv2.COLOR_BGR2RGB)
-            self.show_image(self.lblVideo1, self.image_source)
+            resize_video = cv2.resize(self.image_source, (320, 180), interpolation=cv2.INTER_CUBIC)
+            self.show_image(self.lblVideo1, resize_video)
 
             cv2.waitKey(24)
+
+
         cap.release()
         cv2.destroyAllWindows()
 
