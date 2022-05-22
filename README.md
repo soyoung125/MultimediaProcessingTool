@@ -16,3 +16,4 @@
 사용한 라이브러리 리스트
 - PyQt5
 - opencv-contrib-python(cv2 오류 발생시 삭제하고 재설치)
+- scikit-image
