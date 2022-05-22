@@ -734,6 +734,19 @@ p, li { white-space: pre-wrap; }
        <string>TextLabel</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btnGrayScale">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>20</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>GrayScale</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
