@@ -2,7 +2,7 @@ class VideoTransformationTap:
     def __init__(self):
         pass
 
-    def video_filp(self):
+    def video_flip(self):
         import cv2
 
         video = cv2.VideoCapture(self.video_source)
@@ -19,11 +19,10 @@ class VideoTransformationTap:
         while True:
             ret, video1 = video.read()
             video1 = cv2.cvtColor(video1, cv2.COLOR_BGR2RGB)
-            resize_video = cv2.resize(video1, (180, 320), interpolation=cv2.INTER_CUBIC)
-            rows, cols = resize_video.shape[:2]
-            rot = cv2.getRotationMatrix2D((cols/2, rows/2), angle, 1)
+            resize_video = cv2.resize(video1, (320, 180), interpolation=cv2.INTER_CUBIC)
+            cols, rows = resize_video.shape[:2]
+            rot = cv2.getRotationMatrix2D((rows/2, cols/2), angle, 1)
             video_rotate = cv2.warpAffine(resize_video, rot, (0, 0))
-            # video_rotate = cv2.resize(video1, (320, 180), interpolation=cv2.INTER_CUBIC)
             self.show_image(self.lblVideo2, video_rotate)
 
             cv2.waitKey(24)
