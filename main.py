@@ -49,6 +49,8 @@ class image_processing_class(QMainWindow):
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_filp(self))
         self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
+        self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
+        self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
@@ -133,6 +135,27 @@ class image_processing_class(QMainWindow):
 
         cap.release()
         cv2.destroyAllWindows()
+
+    def connectwebcam(self):
+        import cv2
+        self.stop_webcam = False
+        # self.blur_flag = False
+        cap = cv2.VideoCapture(0)
+        while True:
+            ret, self.source_image = cap.read()
+            self.source_image = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2RGB)
+            self.show_image(self.lblVideo1, self.source_image)
+            # if self.blur_flag:
+            #     blur_image = cv2.blur(self.source_image, (9,9))
+            #     self.show_image(self.lblVideo1, blur_image)
+            cv2.waitKey(24)
+            if self.stop_webcam:
+                break
+        cap.release()
+        cv2.destroyAllWindows()
+
+    def stopwebcam(self):
+        self.stop_webcam =True
 
 
 def createFolder(directory):
