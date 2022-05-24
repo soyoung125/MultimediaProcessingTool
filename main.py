@@ -47,7 +47,7 @@ class image_processing_class(QMainWindow):
 
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
-        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_filp(self))
+        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
         self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
