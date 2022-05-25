@@ -647,7 +647,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnOpenVideo">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>20</y>
         <width>100</width>
         <height>30</height>
@@ -660,8 +660,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QComboBox" name="cnndgrees">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>20</y>
+        <x>360</x>
+        <y>40</y>
         <width>100</width>
         <height>30</height>
        </rect>
@@ -685,8 +685,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="label_d">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>30</y>
+        <x>240</x>
+        <y>50</y>
         <width>111</width>
         <height>16</height>
        </rect>
@@ -698,7 +698,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnVideoFlip">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>480</x>
         <y>20</y>
         <width>100</width>
         <height>30</height>
@@ -711,7 +711,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="lblVideo1">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>180</y>
         <width>411</width>
         <height>301</height>
@@ -724,8 +724,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="lblVideo2">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>170</y>
+        <x>470</x>
+        <y>180</y>
         <width>391</width>
         <height>291</height>
        </rect>
@@ -737,10 +737,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnGrayScale">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>650</x>
         <y>20</y>
-        <width>93</width>
-        <height>28</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="text">
@@ -750,7 +750,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnConnectWebcam">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>60</y>
         <width>141</width>
         <height>28</height>
@@ -763,7 +763,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnWebcamFlip">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>480</x>
         <y>60</y>
         <width>100</width>
         <height>30</height>
@@ -776,7 +776,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnStopWebcam">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>100</y>
         <width>131</width>
         <height>28</height>
@@ -784,6 +784,19 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>Stop Webcam</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnCountPeople">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>60</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Count People</string>
       </property>
      </widget>
     </widget>
@@ -800,7 +813,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>887</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
