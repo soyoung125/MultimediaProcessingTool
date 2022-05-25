@@ -1,3 +1,6 @@
+from numpy import random
+
+
 class VideoTransformationTap:
     def __init__(self):
         pass
@@ -30,6 +33,63 @@ class VideoTransformationTap:
         cap.release()
         cv2.destroyAllWindows()
 
+    def detect(frame):
+        import cv2
+        import imutils
+        import numpy as np
+        import argparse
+
+        HOGCV = cv2.HOGDescriptor()
+        HOGCV.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+        person = 1
+
+        detected, _ = HOGCV.detectMultiScale(frame)
+
+        for x, y, w, h in detected:
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.putText(frame, f'person {person}', (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
+            person += 1
+
+        cv2.putText(frame, 'Status : Detecting ', (40, 40), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 0, 0), 2)
+        cv2.putText(frame, f'Total Persons : {person - 1}', (40, 70), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 0, 0), 2)
+        cv2.imshow('output', frame)
+
+        return frame
+
+    # Counting People
+    def count_people(self):
+        import cv2
+
+        cap = cv2.VideoCapture(0)
+
+        hog = cv2.HOGDescriptor()
+        hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+
+        while True:
+            ret, frame = cap.read()
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            if not ret:
+                break
+
+            # 매 프레임마다 사람 검출
+            detected, _ = hog.detectMultiScale(frame)  # 사각형 정보를 받아옴
+
+            # 검출 결과 화면 표시
+            person = 1
+            for (x, y, w, h) in detected:
+                c = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+                cv2.putText(frame, f'person {person}', (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
+                person += 1
+
+            cv2.putText(frame, f'Total Persons : {person - 1}', (40, 70), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 0, 0), 2)
+            self.show_image(self.lblVideo2, frame)
+
+            cv2.waitKey(24)
+
+        cap.release()
+        cv2.destroyAllWindows()
+
     def video_grayscale(self):
         import cv2
 
@@ -45,3 +105,6 @@ class VideoTransformationTap:
 
         video.release()
         cv2.destroyAllWindows()
+
+
+
