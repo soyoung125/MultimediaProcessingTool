@@ -33,29 +33,6 @@ class VideoTransformationTap:
         cap.release()
         cv2.destroyAllWindows()
 
-    def detect(frame):
-        import cv2
-        import imutils
-        import numpy as np
-        import argparse
-
-        HOGCV = cv2.HOGDescriptor()
-        HOGCV.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-        person = 1
-
-        detected, _ = HOGCV.detectMultiScale(frame)
-
-        for x, y, w, h in detected:
-            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            cv2.putText(frame, f'person {person}', (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
-            person += 1
-
-        cv2.putText(frame, 'Status : Detecting ', (40, 40), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 0, 0), 2)
-        cv2.putText(frame, f'Total Persons : {person - 1}', (40, 70), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 0, 0), 2)
-        cv2.imshow('output', frame)
-
-        return frame
-
     # Counting People
     def count_people(self):
         import cv2
