@@ -35,12 +35,16 @@ class VideoTransformationTap:
 
     # Counting People
     def count_people(self):
+        import numpy as np
         import cv2
+        from matplotlib import pyplot as plt
 
         cap = cv2.VideoCapture(0)
 
-        hog = cv2.HOGDescriptor()
-        hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+        # hog = cv2.HOGDescriptor()
+        # hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
         while True:
             ret, frame = cap.read()
@@ -48,14 +52,13 @@ class VideoTransformationTap:
             if not ret:
                 break
 
-            # 매 프레임마다 사람 검출
-            detected, _ = hog.detectMultiScale(frame)  # 사각형 정보를 받아옴
+            faces = face_cascade.detectMultiScale(frame, 1.3, 5)
 
             # 검출 결과 화면 표시
             person = 1
-            for (x, y, w, h) in detected:
-                c = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+
+            for (x, y, w, h) in faces:
+                cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 cv2.putText(frame, f'person {person}', (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
                 person += 1
 
