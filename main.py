@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QMainWindow
 import os
 import cv2
 
+from Tab.CountPersonTap import CountPersonTap
 from Tab.EnhanceTap import EnhanceTap
 from Tab.FilterTap import FilterTap
 from Tab.ImprovementTap import ImprovementTap
@@ -52,7 +53,9 @@ class image_processing_class(QMainWindow):
         self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
-        self.btnCountPeople.clicked.connect(lambda: VideoTransformationTap.count_people(self))
+
+        # Tap CountPerson
+        self.btnCountPeople.clicked.connect(lambda: CountPersonTap.count_people(self))
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore
