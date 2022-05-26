@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1222</width>
-    <height>806</height>
+    <height>803</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>10</y>
-      <width>1211</width>
-      <height>761</height>
+      <width>1221</width>
+      <height>771</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -33,8 +33,8 @@
      <widget class="QPushButton" name="bntTransOpenImage">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>60</x>
+        <y>30</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -46,10 +46,10 @@
      <widget class="QLabel" name="lblImage1_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>109</y>
-        <width>371</width>
-        <height>341</height>
+        <x>30</x>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -62,10 +62,10 @@
      <widget class="QLabel" name="lblImage2_2">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>70</y>
-        <width>481</width>
-        <height>441</height>
+        <x>649</x>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -78,8 +78,8 @@
      <widget class="QPushButton" name="bntShowHistogram">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>10</y>
+        <x>230</x>
+        <y>30</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -91,8 +91,8 @@
      <widget class="QPushButton" name="bntShowGrayscale">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>10</y>
+        <x>400</x>
+        <y>30</y>
         <width>101</width>
         <height>28</height>
        </rect>
@@ -161,10 +161,10 @@
      <widget class="QLabel" name="lblImage1_F">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>140</y>
-        <width>331</width>
-        <height>420</height>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -174,10 +174,10 @@
      <widget class="QLabel" name="lblImage2_F">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>649</x>
         <y>140</y>
-        <width>331</width>
-        <height>420</height>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -277,9 +277,9 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>120</y>
-        <width>350</width>
-        <height>440</height>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -289,10 +289,10 @@
      <widget class="QLabel" name="lblImage2_E">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>120</y>
-        <width>350</width>
-        <height>440</height>
+        <x>649</x>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -372,10 +372,10 @@
      <widget class="QLabel" name="lblImage1_Save">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>130</y>
-        <width>371</width>
-        <height>341</height>
+        <x>30</x>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -388,10 +388,10 @@
      <widget class="QLabel" name="lblImage2_Save">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>90</y>
-        <width>481</width>
-        <height>441</height>
+        <x>30</x>
+        <y>649</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -409,8 +409,8 @@
      <widget class="QLabel" name="lblImpAlpha">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>20</y>
+        <x>30</x>
+        <y>40</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -422,10 +422,10 @@
      <widget class="QSpinBox" name="spImpAlpha">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>20</y>
-        <width>71</width>
-        <height>22</height>
+        <x>120</x>
+        <y>30</y>
+        <width>60</width>
+        <height>28</height>
        </rect>
       </property>
      </widget>
@@ -433,7 +433,7 @@
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>20</y>
+        <y>30</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -445,8 +445,8 @@
      <widget class="QLabel" name="lblImpX">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>70</y>
+        <x>340</x>
+        <y>20</y>
         <width>81</width>
         <height>16</height>
        </rect>
@@ -458,8 +458,8 @@
      <widget class="QLabel" name="lblImpY">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>100</y>
+        <x>340</x>
+        <y>50</y>
         <width>81</width>
         <height>16</height>
        </rect>
@@ -471,8 +471,8 @@
      <widget class="QDoubleSpinBox" name="dsbImpX">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>70</y>
+        <x>420</x>
+        <y>20</y>
         <width>64</width>
         <height>22</height>
        </rect>
@@ -481,8 +481,8 @@
      <widget class="QDoubleSpinBox" name="dsbImpY">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>100</y>
+        <x>420</x>
+        <y>50</y>
         <width>64</width>
         <height>22</height>
        </rect>
@@ -491,8 +491,8 @@
      <widget class="QPushButton" name="bntShowScaling">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>80</y>
+        <x>500</x>
+        <y>30</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -504,10 +504,10 @@
      <widget class="QComboBox" name="cbbImpFlip">
       <property name="geometry">
        <rect>
-        <x>363</x>
-        <y>20</y>
-        <width>121</width>
-        <height>22</height>
+        <x>660</x>
+        <y>30</y>
+        <width>93</width>
+        <height>28</height>
        </rect>
       </property>
       <item>
@@ -524,8 +524,8 @@
      <widget class="QPushButton" name="bntshowFlip">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>20</y>
+        <x>760</x>
+        <y>30</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -537,8 +537,8 @@
      <widget class="QLabel" name="lblImpSt">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>70</y>
+        <x>900</x>
+        <y>20</y>
         <width>64</width>
         <height>51</height>
        </rect>
@@ -555,8 +555,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QRadioButton" name="rbImpHorizontal">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>70</y>
+        <x>980</x>
+        <y>20</y>
         <width>108</width>
         <height>19</height>
        </rect>
@@ -571,8 +571,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QRadioButton" name="rvImpVertical">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>100</y>
+        <x>980</x>
+        <y>50</y>
         <width>108</width>
         <height>19</height>
        </rect>
@@ -584,8 +584,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="bntShowWrap">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>80</y>
+        <x>1080</x>
+        <y>30</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -597,10 +597,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="lblImage1">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>180</y>
-        <width>320</width>
-        <height>310</height>
+        <x>30</x>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -613,10 +613,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="lblImage2">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>180</y>
-        <width>320</width>
-        <height>310</height>
+        <x>649</x>
+        <y>140</y>
+        <width>540</width>
+        <height>560</height>
        </rect>
       </property>
       <property name="text">
@@ -629,8 +629,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="bntImpOpenImage">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>130</y>
+        <x>80</x>
+        <y>90</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -647,8 +647,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnOpenVideo">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>20</y>
+        <x>60</x>
+        <y>40</y>
         <width>100</width>
         <height>30</height>
        </rect>
@@ -660,7 +660,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QComboBox" name="cnndgrees">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>610</x>
         <y>40</y>
         <width>100</width>
         <height>30</height>
@@ -685,7 +685,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="label_d">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>480</x>
         <y>50</y>
         <width>111</width>
         <height>16</height>
@@ -698,7 +698,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnVideoFlip">
       <property name="geometry">
        <rect>
-        <x>480</x>
+        <x>750</x>
         <y>20</y>
         <width>100</width>
         <height>30</height>
@@ -713,7 +713,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>210</y>
-        <width>570</width>
+        <width>560</width>
         <height>450</height>
        </rect>
       </property>
@@ -737,7 +737,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnGrayScale">
       <property name="geometry">
        <rect>
-        <x>650</x>
+        <x>980</x>
         <y>20</y>
         <width>100</width>
         <height>30</height>
@@ -750,8 +750,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnConnectWebcam">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>60</y>
+        <x>230</x>
+        <y>20</y>
         <width>141</width>
         <height>28</height>
        </rect>
@@ -763,7 +763,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnWebcamFlip">
       <property name="geometry">
        <rect>
-        <x>480</x>
+        <x>750</x>
         <y>60</y>
         <width>100</width>
         <height>30</height>
@@ -776,9 +776,9 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnStopWebcam">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>100</y>
-        <width>131</width>
+        <x>230</x>
+        <y>60</y>
+        <width>141</width>
         <height>28</height>
        </rect>
       </property>
@@ -789,7 +789,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnCountPeople">
       <property name="geometry">
        <rect>
-        <x>650</x>
+        <x>980</x>
         <y>60</y>
         <width>100</width>
         <height>30</height>
