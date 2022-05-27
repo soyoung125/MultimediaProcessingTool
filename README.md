@@ -17,3 +17,7 @@
 - PyQt5
 - opencv-contrib-python(cv2 오류 발생시 삭제하고 재설치)
 - scikit-image
+- Pillow
+- openCV-python
+- numpy
+- matplotlib
