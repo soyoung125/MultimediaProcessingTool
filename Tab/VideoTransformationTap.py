@@ -30,6 +30,9 @@ class VideoTransformationTap:
         cap.release()
         cv2.destroyAllWindows()
 
+    def webcam_flip(self):
+        self.flip_flag = True
+       
     def video_grayscale(self):
         self.grayscale_flag = True
 

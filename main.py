@@ -52,11 +52,13 @@ class image_processing_class(QMainWindow):
 
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
-        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
-        self.btnVideoGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
-        self.btnWevcamGrayScale.clicked.connect(lambda: VideoTransformationTap.webcam_grayscale(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connect_webcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
+        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
+        self.btnWebcamFlip.clicked.connect(lambda: VideoTransformationTap.webcam_flip(self))
+        self.btnVideoGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
+        self.btnWevcamGrayScale.clicked.connect(lambda: VideoTransformationTap.webcam_grayscale(self))
+
 
         # Tap CountPerson
         self.btnCountPeople.clicked.connect(lambda: CountPersonTap.count_people(self))
@@ -141,20 +143,38 @@ class image_processing_class(QMainWindow):
     def connect_webcam(self):
         self.stop_webcam = False
         self.grayscale_flag = False
-
+        self.flip_flag = False
+        
         cap = cv2.VideoCapture(0)
         while True:
             ret, self.source_image = cap.read()
             self.source_image = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2RGB)
             self.show_image(self.lblVideo1, self.source_image)
+
+            if self.flip_flag:
+                direction = self.cnndgrees.currentText()
+
+                if direction == '90':
+                    angle = 90.0
+                elif direction == '180':
+                    angle = 180.0
+                elif direction == '270':
+                    angle = 270.0
+
+                cols, rows = self.source_image.shape[:2]
+                rot = cv2.getRotationMatrix2D((rows / 2, cols / 2), angle, 1)
+                webcam_rotate = cv2.warpAffine(self.source_image, rot, (0, 0))
+                self.show_image(self.lblVideo2, webcam_rotate)
+
+            cv2.waitKey(24)
+         
             if self.grayscale_flag:
                 gray = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2GRAY)
                 self.show_image(self.lblVideo2, gray)
             cv2.waitKey(24)
             if self.stop_webcam:
                 break
-        cap.release()
-        cv2.destroyAllWindows()
+
 
     def stopwebcam(self):
         self.stop_webcam =True
