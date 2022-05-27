@@ -34,20 +34,21 @@ class VideoTransformationTap:
         cv2.destroyAllWindows()
 
     def video_grayscale(self):
-        import cv2
-
-        video = cv2.VideoCapture(self.video_source)
-
-        while True:
-            ret, img = video.read()
-
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-            self.show_image(self.lblVideo2, gray)
-            cv2.waitKey(24)
-
-        video.release()
-        cv2.destroyAllWindows()
+        self.grayscale_flag = True
+        # import cv2
+        #
+        # video = cv2.VideoCapture(self.video_source)
+        #
+        # while True:
+        #     ret, img = video.read()
+        #
+        #     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        #
+        #     self.show_image(self.lblVideo2, gray)
+        #     cv2.waitKey(24)
+        #
+        # video.release()
+        # cv2.destroyAllWindows()
 
     def webcam_grayscale(self):
         self.grayscale_flag = True

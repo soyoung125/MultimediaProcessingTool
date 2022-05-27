@@ -20,6 +20,7 @@ class image_processing_class(QMainWindow):
         self.image_source = None
         self.source_image = None
         self.video_source = None
+        self.grayscale_flag = False
 
         # Tab improvement
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
@@ -119,12 +120,18 @@ class image_processing_class(QMainWindow):
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         cap = cv2.VideoCapture(fileName)
         self.video_source = fileName
+        self.grayscale_flag = False
 
         while True:
-            ret, self.image_source = cap.read()
-            self.image_source = cv2.cvtColor(self.image_source, cv2.COLOR_BGR2RGB)
-            resize_video = cv2.resize(self.image_source, (320, 180), interpolation=cv2.INTER_CUBIC)
+            ret, self.source_image = cap.read()
+            self.source_image = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2RGB)
+            resize_video = cv2.resize(self.source_image, (320, 180), interpolation=cv2.INTER_CUBIC)
             self.show_image(self.lblVideo1, resize_video)
+
+            if self.grayscale_flag:
+                gray = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2GRAY)
+                resize_gray_video = cv2.resize(gray, (320, 180), interpolation=cv2.INTER_CUBIC)
+                self.show_image(self.lblVideo2, resize_gray_video)
 
             cv2.waitKey(24)
 
@@ -134,6 +141,7 @@ class image_processing_class(QMainWindow):
     def connect_webcam(self):
         self.stop_webcam = False
         self.grayscale_flag = False
+
         cap = cv2.VideoCapture(0)
         while True:
             ret, self.source_image = cap.read()
