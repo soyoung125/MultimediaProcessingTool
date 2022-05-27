@@ -49,5 +49,5 @@ class VideoTransformationTap:
         video.release()
         cv2.destroyAllWindows()
 
-
-
+    def webcam_grayscale(self):
+        self.grayscale_flag = True

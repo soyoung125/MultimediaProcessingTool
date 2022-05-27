@@ -52,7 +52,8 @@ class image_processing_class(QMainWindow):
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
-        self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
+        self.btnVideoGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
+        self.btnWevcamGrayScale.clicked.connect(lambda: VideoTransformationTap.webcam_grayscale(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connect_webcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
 
@@ -132,15 +133,15 @@ class image_processing_class(QMainWindow):
 
     def connect_webcam(self):
         self.stop_webcam = False
-        # self.blur_flag = False
+        self.grayscale_flag = False
         cap = cv2.VideoCapture(0)
         while True:
             ret, self.source_image = cap.read()
             self.source_image = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2RGB)
             self.show_image(self.lblVideo1, self.source_image)
-            # if self.blur_flag:
-            #     blur_image = cv2.blur(self.source_image, (9,9))
-            #     self.show_image(self.lblVideo1, blur_image)
+            if self.grayscale_flag:
+                gray = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2GRAY)
+                self.show_image(self.lblVideo2, gray)
             cv2.waitKey(24)
             if self.stop_webcam:
                 break
