@@ -144,7 +144,7 @@ class image_processing_class(QMainWindow):
         self.stop_webcam = False
         self.grayscale_flag = False
         self.flip_flag = False
-        
+        self.angle = 0
         cap = cv2.VideoCapture(0)
         while True:
             ret, self.source_image = cap.read()
@@ -152,17 +152,8 @@ class image_processing_class(QMainWindow):
             self.show_image(self.lblVideo1, self.source_image)
 
             if self.flip_flag:
-                direction = self.cnndgrees.currentText()
-
-                if direction == '90':
-                    angle = 90.0
-                elif direction == '180':
-                    angle = 180.0
-                elif direction == '270':
-                    angle = 270.0
-
                 cols, rows = self.source_image.shape[:2]
-                rot = cv2.getRotationMatrix2D((rows / 2, cols / 2), angle, 1)
+                rot = cv2.getRotationMatrix2D((rows / 2, cols / 2), self.angle, 1)
                 webcam_rotate = cv2.warpAffine(self.source_image, rot, (0, 0))
                 self.show_image(self.lblVideo2, webcam_rotate)
 

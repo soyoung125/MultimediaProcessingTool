@@ -32,6 +32,14 @@ class VideoTransformationTap:
 
     def webcam_flip(self):
         self.flip_flag = True
+        direction = self.cnndgrees.currentText()
+
+        if direction == '90':
+            self.angle = 90.0
+        elif direction == '180':
+            self.angle = 180.0
+        elif direction == '270':
+            self.angle = 270.0
        
     def video_grayscale(self):
         self.grayscale_flag = True
