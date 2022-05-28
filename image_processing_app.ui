@@ -734,17 +734,17 @@ p, li { white-space: pre-wrap; }
        <string>TextLabel</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnVideoGrayScale">
+     <widget class="QPushButton" name="btnGrayScale">
       <property name="geometry">
        <rect>
-        <x>980</x>
-        <y>20</y>
-        <width>141</width>
+        <x>930</x>
+        <y>40</y>
+        <width>111</width>
         <height>30</height>
        </rect>
       </property>
       <property name="text">
-       <string>Video GrayScale</string>
+       <string>GrayScale</string>
       </property>
      </widget>
      <widget class="QPushButton" name="btnConnectWebcam">
@@ -784,19 +784,6 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>Stop Webcam</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnWevcamGrayScale">
-      <property name="geometry">
-       <rect>
-        <x>980</x>
-        <y>60</y>
-        <width>141</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Webcam GrayScale</string>
       </property>
      </widget>
     </widget>

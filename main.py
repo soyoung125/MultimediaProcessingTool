@@ -21,6 +21,7 @@ class image_processing_class(QMainWindow):
         self.source_image = None
         self.video_source = None
         self.grayscale_flag = False
+        self.stop_video = True
 
         # Tab improvement
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
@@ -56,8 +57,7 @@ class image_processing_class(QMainWindow):
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
         self.btnWebcamFlip.clicked.connect(lambda: VideoTransformationTap.webcam_flip(self))
-        self.btnVideoGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
-        self.btnWevcamGrayScale.clicked.connect(lambda: VideoTransformationTap.webcam_grayscale(self))
+        self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.grayscale(self))
 
 
         # Tap CountPerson
@@ -123,6 +123,7 @@ class image_processing_class(QMainWindow):
         cap = cv2.VideoCapture(fileName)
         self.video_source = fileName
         self.grayscale_flag = False
+        self.stop_video = False
 
         while True:
             ret, self.source_image = cap.read()
@@ -136,6 +137,8 @@ class image_processing_class(QMainWindow):
                 self.show_image(self.lblVideo2, resize_gray_video)
 
             cv2.waitKey(24)
+            if self.stop_video:
+                break
 
         cap.release()
         cv2.destroyAllWindows()
