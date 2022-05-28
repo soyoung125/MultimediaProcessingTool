@@ -1,3 +1,7 @@
+# import OpenNewScreen
+from Tab.OpenNewScreen import OpenNewScreen
+
+
 class ImprovementTap():
     def __init__(self):
         pass
@@ -95,3 +99,9 @@ class ImprovementTap():
 
         img2 = imread('./Images/Wrap.png')
         self.show_image(self.lblImage2, img2)
+
+    def click_crop(self):
+        print(self.image_source)
+        instance = OpenNewScreen()
+        # lambda: openNewScreen.open_screen(self.image_source)
+        instance.open_screen(self.image_source)

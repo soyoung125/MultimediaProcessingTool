@@ -29,6 +29,7 @@ class image_processing_class(QMainWindow):
         self.bntShowScaling.clicked.connect(lambda: ImprovementTap.show_scaling(self))
         self.bntshowFlip.clicked.connect(lambda: ImprovementTap.show_flip(self))
         self.bntShowWrap.clicked.connect(lambda: ImprovementTap.show_wrap(self))
+        self.btnShowCrop.clicked.connect(lambda: ImprovementTap.click_crop(self))
 
         # Tab Transformation
         self.bntTransOpenImage.clicked.connect(lambda: self.open_image2())
