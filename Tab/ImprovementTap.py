@@ -1,4 +1,7 @@
 # import OpenNewScreen
+from cv2 import imread
+from matplotlib import pyplot as plt
+
 from Tab.OpenNewScreen import OpenNewScreen
 
 
@@ -101,7 +104,11 @@ class ImprovementTap():
         self.show_image(self.lblImage2, img2)
 
     def click_crop(self):
-        print(self.image_source)
+        img = imread(self.image_source)
+
         instance = OpenNewScreen()
-        # lambda: openNewScreen.open_screen(self.image_source)
-        instance.open_screen(self.image_source)
+
+        x1, y1, x2, y2 = instance.open_screen(self.image_source)
+
+        croped_img = img[y1:y2, x1:x2]
+        self.show_image(self.lblImage2, croped_img)
