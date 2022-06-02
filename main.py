@@ -54,7 +54,9 @@ class image_processing_class(QMainWindow):
 
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
-        self.btnConnectWebcam.clicked.connect(lambda: self.connect_webcam())
+        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
+        self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
+        self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
         self.btnWebcamFlip.clicked.connect(lambda: VideoTransformationTap.webcam_flip(self))
@@ -65,6 +67,8 @@ class image_processing_class(QMainWindow):
         self.btnCountPeople.clicked.connect(lambda: CountPersonTap.count_people(self))
 
     def open_image(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(),'*.*')
         try:
             self.image_source = fileName
@@ -74,6 +78,8 @@ class image_processing_class(QMainWindow):
             print('Error: {'.format(e))
 
     def open_image2(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(),'*.*')
         try:
             self.image_source = fileName
@@ -83,6 +89,8 @@ class image_processing_class(QMainWindow):
             print('Error: {'.format(e))
 
     def open_image3(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(),'*.*')
         try:
             self.image_source = fileName
@@ -92,6 +100,8 @@ class image_processing_class(QMainWindow):
             print('Error: {'.format(e))
 
     def open_image4(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(),'*.*')
         try:
             self.image_source = fileName
@@ -101,6 +111,8 @@ class image_processing_class(QMainWindow):
             print('Error: {'.format(e))
 
     def open_image5(self):
+        from PyQt5 import QtWidgets, QtCore
+        from skimage import io
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         try:
             self.image_source = fileName
@@ -120,6 +132,9 @@ class image_processing_class(QMainWindow):
             print('Error: {}'.format(e))
 
     def open_video(self):
+        import cv2
+        from PyQt5 import QtWidgets, QtCore
+
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         cap = cv2.VideoCapture(fileName)
         self.video_source = fileName
@@ -162,7 +177,7 @@ class image_processing_class(QMainWindow):
                 self.show_image(self.lblVideo2, webcam_rotate)
 
             cv2.waitKey(24)
-         
+
             if self.grayscale_flag:
                 gray = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2GRAY)
                 self.show_image(self.lblVideo2, gray)

@@ -1,3 +1,6 @@
+from numpy import random
+
+
 class VideoTransformationTap:
     def __init__(self):
         pass
@@ -20,7 +23,7 @@ class VideoTransformationTap:
         while True:
             ret, video1 = video.read()
             video1 = cv2.cvtColor(video1, cv2.COLOR_BGR2RGB)
-            resize_video = cv2.resize(video1, (320, 180), interpolation=cv2.INTER_CUBIC)
+            resize_video = cv2.resize(video1, (540, 560), interpolation=cv2.INTER_CUBIC)
             cols, rows = resize_video.shape[:2]
             rot = cv2.getRotationMatrix2D((rows/2, cols/2), angle, 1)
             video_rotate = cv2.warpAffine(resize_video, rot, (0, 0))
@@ -41,6 +44,6 @@ class VideoTransformationTap:
             self.angle = 180.0
         elif direction == '270':
             self.angle = 270.0
-       
+
     def grayscale(self):
         self.grayscale_flag = True
