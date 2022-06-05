@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -388,8 +388,8 @@
      <widget class="QLabel" name="lblImage2_Save">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>649</y>
+        <x>630</x>
+        <y>150</y>
         <width>540</width>
         <height>560</height>
        </rect>
