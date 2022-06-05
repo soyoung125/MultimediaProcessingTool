@@ -159,7 +159,7 @@ class image_processing_class(QMainWindow):
         cap.release()
         cv2.destroyAllWindows()
 
-    def connect_webcam(self):
+    def connectwebcam(self):
         self.stop_webcam = False
         self.grayscale_flag = False
         self.flip_flag = False
