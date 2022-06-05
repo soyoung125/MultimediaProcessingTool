@@ -1,3 +1,6 @@
+import os
+
+
 class CountPersonTap:
     def __init__(self):
         pass
@@ -5,6 +8,7 @@ class CountPersonTap:
     def count_people(self):
         # !python yolov5/detect.py --weights best.pt --img 416 --conf 0.1 --source 0
         print(111)
+        os.system("python yolov5/detect.py --weights best.pt --img 416 --conf 0.1 --source 0")
 
     # def count_people(self):
     #     import cv2
