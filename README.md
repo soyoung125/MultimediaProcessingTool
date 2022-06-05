@@ -21,3 +21,10 @@
 - openCV-python
 - numpy
 - matplotlib
+
+추가적으로 웹캑을 이용해 사람을 카운팅하기 위해
+
+    git clone https://github.com/ultralytics/yolov5
+    cd yolov5
+    pip install -qr requirements.txt
+을 터밀널에 입력합니다.
