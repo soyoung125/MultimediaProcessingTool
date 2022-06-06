@@ -45,6 +45,7 @@ class image_processing_class(QMainWindow):
         # Tab Enhance
         self.btnEhnopenimage.clicked.connect(lambda: self.open_image3())
         self.btnHisto_equal.clicked.connect(lambda: EnhanceTab.histogram_equalization(self))
+        self.btnGammaCorrection.clicked.connect(lambda: EnhanceTab.gamma_correction(self))
 
         # Tab Filter
         self.btnFilterOpenImage.clicked.connect(lambda: self.open_image4())
