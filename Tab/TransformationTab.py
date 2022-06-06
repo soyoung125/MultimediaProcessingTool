@@ -5,7 +5,7 @@ class TransformationTab():
     def show_histogram(self):
         from matplotlib import pyplot as plt
         from skimage import io
-        plt.figure(figsize=(5,4))
+        plt.figure(figsize=(6, 6))
         plt.hist(self.source_image.ravel(), bins=256)
         plt.savefig('./Images/Hist.png')
         img2 =io.imread('./Images/Hist.png')
@@ -18,7 +18,7 @@ class TransformationTab():
         import matplotlib.pyplot as plt
 
         gray_image = rgb2gray(self.source_image)
-        plt.figure(figsize=(5,4)), plt.axis('off')
+        plt.figure(figsize=(6, 6)), plt.axis('off')
         plt.imshow(gray_image, cmap='gray', vmin=0, vmax=1)
         plt.savefig('./Images/Invert.png')
         img2 = imread('./Images/Invert.png')

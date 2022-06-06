@@ -10,7 +10,7 @@ class FilterTab():
         img = io.imread(self.image_source)
         sigma = int(self.txtSigma.toPlainText())
         im_blur = filters.gaussian(img, sigma=sigma, channel_axis=-1)
-        plt.figure(figsize=(4, 5))
+        plt.figure(figsize=(6, 6))
         plt.axis('off')
         plt.imshow(im_blur)
         plt.savefig('./Images/BlurImage.png')
@@ -30,7 +30,7 @@ class FilterTab():
         smoothing_mask = np.array([[1 / 16, 1 / 8, 1 / 16], [1 / 8, 1 / 4, 1 / 8], [1 / 16, 1 / 8, 1 / 16]])
         im_smooth = cv2.filter2D(img, -1, smoothing_mask)
 
-        plt.figure(figsize=(4, 5))
+        plt.figure(figsize=(6, 6))
         plt.axis('off')
         plt.imshow(im_smooth)
         plt.savefig('./Images/SmoothImage.png')
@@ -67,7 +67,7 @@ class FilterTab():
 
         im_sharp = cv2.filter2D(img, -1, sharpening_mask)
 
-        plt.figure(figsize=(4, 5))
+        plt.figure(figsize=(6, 6))
         plt.axis('off')
         plt.imshow(im_sharp)
         plt.savefig('./Images/SharpImage.png')
