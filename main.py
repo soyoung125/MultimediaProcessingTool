@@ -42,17 +42,17 @@ class image_processing_class(QMainWindow):
         self.btnSavePNG.clicked.connect(lambda: SaveTab.save_PNG(self))
         self.btnSaveBMP.clicked.connect(lambda: SaveTab.save_BMP(self))
 
-        # Tap Enhance
+        # Tab Enhance
         self.btnehnopenimage.clicked.connect(lambda: self.open_image3())
         self.btnhisto_equal.clicked.connect(lambda: EnhanceTab.histogram_equalization(self))
 
-        # Tap Filter
+        # Tab Filter
         self.btnFilterOpenImage.clicked.connect(lambda: self.open_image4())
         self.btnBlur.clicked.connect(lambda: FilterTab.show_blur(self))
         self.btnSmoothing.clicked.connect(lambda: FilterTab.show_smooth(self))
         self.btnSharpening.clicked.connect(lambda: FilterTab.show_sharp(self))
 
-        # Tap VideoTransformation
+        # Tab VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTab.video_flip(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
@@ -62,7 +62,7 @@ class image_processing_class(QMainWindow):
         self.btnGrayScale.clicked.connect(lambda: VideoTransformationTab.grayscale(self))
 
 
-        # Tap CountPerson
+        # Tab CountPerson
         self.btnCountPeople.clicked.connect(lambda: CountPersonTab.count_people(self))
 
     def open_image(self):
