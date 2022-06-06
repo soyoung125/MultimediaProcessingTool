@@ -67,7 +67,7 @@ class ImprovementTap():
         img2 = imread('./Images/Flip.png')
         self.show_image(self.lblImage2, img2)
 
-    def show_wrap(self):
+    def show_warp(self):
         import numpy as np
         from PIL import Image
         import math
