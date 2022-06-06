@@ -24,27 +24,27 @@ class image_processing_class(QMainWindow):
         self.stop_video = True
 
         # Tab improvement
-        self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
-        self.bntShowRotate.clicked.connect(lambda: ImprovementTab.show_rotate(self))
-        self.bntShowScaling.clicked.connect(lambda: ImprovementTab.show_scaling(self))
-        self.bntshowFlip.clicked.connect(lambda: ImprovementTab.show_flip(self))
-        self.bntShowWarp.clicked.connect(lambda: ImprovementTab.show_warp(self))
+        self.btnImpOpenImage.clicked.connect(lambda: self.open_image())
+        self.btnShowRotate.clicked.connect(lambda: ImprovementTab.show_rotate(self))
+        self.btnShowScaling.clicked.connect(lambda: ImprovementTab.show_scaling(self))
+        self.btnShowFlip.clicked.connect(lambda: ImprovementTab.show_flip(self))
+        self.btnShowWarp.clicked.connect(lambda: ImprovementTab.show_warp(self))
         self.btnShowCrop.clicked.connect(lambda: ImprovementTab.click_crop(self))
 
         # Tab Transformation
-        self.bntTransOpenImage.clicked.connect(lambda: self.open_image2())
-        self.bntShowHistogram.clicked.connect(lambda: TransformationTab.show_histogram(self))
-        self.bntShowGrayscale.clicked.connect(lambda: TransformationTab.show_grayscale(self))
+        self.btnTransOpenImage.clicked.connect(lambda: self.open_image2())
+        self.btnShowHistogram.clicked.connect(lambda: TransformationTab.show_histogram(self))
+        self.btnShowGrayscale.clicked.connect(lambda: TransformationTab.show_grayscale(self))
 
         # Tab Save
-        self.bntsavOpenImage.clicked.connect(lambda: self.open_image5())
+        self.btnSavOpenImage.clicked.connect(lambda: self.open_image5())
         self.btnSaveJPEG.clicked.connect(lambda: SaveTab.save_JPEG(self))
         self.btnSavePNG.clicked.connect(lambda: SaveTab.save_PNG(self))
         self.btnSaveBMP.clicked.connect(lambda: SaveTab.save_BMP(self))
 
         # Tab Enhance
-        self.btnehnopenimage.clicked.connect(lambda: self.open_image3())
-        self.btnhisto_equal.clicked.connect(lambda: EnhanceTab.histogram_equalization(self))
+        self.btnEhnopenimage.clicked.connect(lambda: self.open_image3())
+        self.btnHisto_equal.clicked.connect(lambda: EnhanceTab.histogram_equalization(self))
 
         # Tab Filter
         self.btnFilterOpenImage.clicked.connect(lambda: self.open_image4())

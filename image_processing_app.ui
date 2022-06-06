@@ -30,7 +30,7 @@
      <attribute name="title">
       <string>Transformation</string>
      </attribute>
-     <widget class="QPushButton" name="bntTransOpenImage">
+     <widget class="QPushButton" name="btnTransOpenImage">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -53,7 +53,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Original image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -69,13 +69,13 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Result image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntShowHistogram">
+     <widget class="QPushButton" name="btnShowHistogram">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -88,7 +88,7 @@
        <string>Histogram</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntShowGrayscale">
+     <widget class="QPushButton" name="btnShowGrayscale">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -168,7 +168,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Original image</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="lblImage2_F">
@@ -181,7 +184,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Result image</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label">
@@ -260,7 +266,7 @@
      <attribute name="title">
       <string>Enhance</string>
      </attribute>
-     <widget class="QPushButton" name="btnehnopenimage">
+     <widget class="QPushButton" name="btnEhnopenimage">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -283,7 +289,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Original image</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="lblImage2_E">
@@ -296,10 +305,13 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Result image</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnhisto_equal">
+     <widget class="QPushButton" name="btnHisto_equal">
       <property name="geometry">
        <rect>
         <x>290</x>
@@ -356,7 +368,7 @@
        <string>SaveBMP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntsavOpenImage">
+     <widget class="QPushButton" name="btnSavOpenImage">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -379,7 +391,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Original image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -395,7 +407,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Result image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -429,7 +441,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntShowRotate">
+     <widget class="QPushButton" name="btnShowRotate">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -488,7 +500,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntShowScaling">
+     <widget class="QPushButton" name="btnShowScaling">
       <property name="geometry">
        <rect>
         <x>500</x>
@@ -504,9 +516,9 @@
      <widget class="QComboBox" name="cbbImpFlip">
       <property name="geometry">
        <rect>
-        <x>660</x>
+        <x>642</x>
         <y>30</y>
-        <width>93</width>
+        <width>111</width>
         <height>28</height>
        </rect>
       </property>
@@ -521,7 +533,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="bntshowFlip">
+     <widget class="QPushButton" name="btnShowFlip">
       <property name="geometry">
        <rect>
         <x>760</x>
@@ -581,7 +593,7 @@ p, li { white-space: pre-wrap; }
        <string>vertical</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntShowWrap">
+     <widget class="QPushButton" name="btnShowWarp">
       <property name="geometry">
        <rect>
         <x>1080</x>
@@ -604,7 +616,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Original image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -620,13 +632,13 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Result image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="bntImpOpenImage">
+     <widget class="QPushButton" name="btnImpOpenImage">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -731,7 +743,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Original image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -747,7 +759,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Result image</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
