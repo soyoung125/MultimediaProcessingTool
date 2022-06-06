@@ -1,7 +1,7 @@
 from numpy import random
 
 
-class VideoTransformationTap:
+class VideoTransformationTab:
     def __init__(self):
         pass
 

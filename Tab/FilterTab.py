@@ -1,4 +1,4 @@
-class FilterTap():
+class FilterTab():
     def __init__(self):
         pass
 

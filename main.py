@@ -4,11 +4,11 @@ import cv2
 from PyQt5 import QtWidgets, QtCore
 from skimage import io
 
-from Tab.CountPersonTap import CountPersonTap
-from Tab.EnhanceTap import EnhanceTap
-from Tab.FilterTap import FilterTap
-from Tab.ImprovementTap import ImprovementTap
-from Tab.VideoTransformationTap import VideoTransformationTap
+from Tab.CountPersonTab import CountPersonTab
+from Tab.EnhanceTab import EnhanceTab
+from Tab.FilterTab import FilterTab
+from Tab.ImprovementTab import ImprovementTab
+from Tab.VideoTransformationTab import VideoTransformationTab
 from Tab.TransformationTab import TransformationTab
 from Tab.SaveTab import SaveTab
 
@@ -25,11 +25,11 @@ class image_processing_class(QMainWindow):
 
         # Tab improvement
         self.bntImpOpenImage.clicked.connect(lambda: self.open_image())
-        self.bntShowRotate.clicked.connect(lambda: ImprovementTap.show_rotate(self))
-        self.bntShowScaling.clicked.connect(lambda: ImprovementTap.show_scaling(self))
-        self.bntshowFlip.clicked.connect(lambda: ImprovementTap.show_flip(self))
-        self.bntShowWrap.clicked.connect(lambda: ImprovementTap.show_warp(self))
-        self.btnShowCrop.clicked.connect(lambda: ImprovementTap.click_crop(self))
+        self.bntShowRotate.clicked.connect(lambda: ImprovementTab.show_rotate(self))
+        self.bntShowScaling.clicked.connect(lambda: ImprovementTab.show_scaling(self))
+        self.bntshowFlip.clicked.connect(lambda: ImprovementTab.show_flip(self))
+        self.bntShowWarp.clicked.connect(lambda: ImprovementTab.show_warp(self))
+        self.btnShowCrop.clicked.connect(lambda: ImprovementTab.click_crop(self))
 
         # Tab Transformation
         self.bntTransOpenImage.clicked.connect(lambda: self.open_image2())
@@ -44,26 +44,26 @@ class image_processing_class(QMainWindow):
 
         # Tap Enhance
         self.btnehnopenimage.clicked.connect(lambda: self.open_image3())
-        self.btnhisto_equal.clicked.connect(lambda: EnhanceTap.histogram_equalization(self))
+        self.btnhisto_equal.clicked.connect(lambda: EnhanceTab.histogram_equalization(self))
 
         # Tap Filter
         self.btnFilterOpenImage.clicked.connect(lambda: self.open_image4())
-        self.btnBlur.clicked.connect(lambda: FilterTap.show_blur(self))
-        self.btnSmoothing.clicked.connect(lambda: FilterTap.show_smooth(self))
-        self.btnSharpening.clicked.connect(lambda: FilterTap.show_sharp(self))
+        self.btnBlur.clicked.connect(lambda: FilterTab.show_blur(self))
+        self.btnSmoothing.clicked.connect(lambda: FilterTab.show_smooth(self))
+        self.btnSharpening.clicked.connect(lambda: FilterTab.show_sharp(self))
 
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
-        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
+        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTab.video_flip(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
-        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
-        self.btnWebcamFlip.clicked.connect(lambda: VideoTransformationTap.webcam_flip(self))
-        self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.grayscale(self))
+        self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTab.video_flip(self))
+        self.btnWebcamFlip.clicked.connect(lambda: VideoTransformationTab.webcam_flip(self))
+        self.btnGrayScale.clicked.connect(lambda: VideoTransformationTab.grayscale(self))
 
 
         # Tap CountPerson
-        self.btnCountPeople.clicked.connect(lambda: CountPersonTap.count_people(self))
+        self.btnCountPeople.clicked.connect(lambda: CountPersonTab.count_people(self))
 
     def open_image(self):
         from PyQt5 import QtWidgets, QtCore

@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from Tab.OpenNewScreen import OpenNewScreen
 
 
-class ImprovementTap():
+class ImprovementTab():
     def __init__(self):
         pass
 

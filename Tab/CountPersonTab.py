@@ -1,7 +1,7 @@
 import os
 
 
-class CountPersonTap:
+class CountPersonTab:
     def __init__(self):
         pass
 

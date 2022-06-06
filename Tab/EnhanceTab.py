@@ -1,4 +1,4 @@
-class EnhanceTap():
+class EnhanceTab():
     def __init__(self):
         pass
 
