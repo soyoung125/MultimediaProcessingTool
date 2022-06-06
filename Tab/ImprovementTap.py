@@ -19,7 +19,7 @@ class ImprovementTap():
         alpha = self.spImpAlpha.value()
 
         im_rotate = im.rotate(alpha)
-        plt.figure(figsize=(5, 4)), plt.axis('off')
+        plt.figure(figsize=(6, 6)), plt.axis('off')
         plt.imshow(im_rotate, cmap='gray', vmin=0, vmax=1)
         plt.savefig('./Images/Rotate.png')
 
@@ -39,7 +39,7 @@ class ImprovementTap():
         size1 = (x, y)
         im_size = im.resize((round(size0[0] * size1[0]), round(size0[1] * size1[1])))
 
-        plt.figure(figsize=(5, 4)), plt.axis('off')
+        plt.figure(figsize=(6, 6)), plt.axis('off')
         plt.imshow(im_size, cmap='gray', vmin=0, vmax=1)
         plt.savefig('./Images/Scaling.png')
 
@@ -60,7 +60,7 @@ class ImprovementTap():
         elif direction == 'Left-Right':
             im_Flip = im.transpose(Image.FLIP_LEFT_RIGHT)
 
-        plt.figure(figsize=(5, 4)), plt.axis('off')
+        plt.figure(figsize=(6, 6)), plt.axis('off')
         plt.imshow(im_Flip)
         plt.savefig('./Images/Flip.png')
 
@@ -96,7 +96,7 @@ class ImprovementTap():
                     else:
                         img_output[i, j] = 0
 
-        plt.figure(figsize=(5, 4)), plt.axis('off')
+        plt.figure(figsize=(6, 6)), plt.axis('off')
         plt.imshow(img_output, cmap='gray')
         plt.savefig('./Images/Wrap.png')
 

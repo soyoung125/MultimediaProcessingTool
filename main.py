@@ -55,7 +55,6 @@ class image_processing_class(QMainWindow):
         # Tap VideoTransformation
         self.btnOpenVideo.clicked.connect(lambda: self.open_video())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
-        self.btnGrayScale.clicked.connect(lambda: VideoTransformationTap.video_grayscale(self))
         self.btnConnectWebcam.clicked.connect(lambda: self.connectwebcam())
         self.btnStopWebcam.clicked.connect(lambda: self.stopwebcam())
         self.btnVideoFlip.clicked.connect(lambda: VideoTransformationTap.video_flip(self))
@@ -138,7 +137,7 @@ class image_processing_class(QMainWindow):
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', QtCore.QDir.rootPath(), '*.*')
         cap = cv2.VideoCapture(fileName)
         self.video_source = fileName
-        self.grayscale_flag = False
+        self.stop_webcam = True
         self.stop_video = False
 
         while True:
@@ -148,6 +147,7 @@ class image_processing_class(QMainWindow):
             self.show_image(self.lblVideo1, resize_video)
 
             if self.grayscale_flag:
+                print(1)
                 gray = cv2.cvtColor(self.source_image, cv2.COLOR_BGR2GRAY)
                 resize_gray_video = cv2.resize(gray, (320, 180), interpolation=cv2.INTER_CUBIC)
                 self.show_image(self.lblVideo2, resize_gray_video)
@@ -160,6 +160,7 @@ class image_processing_class(QMainWindow):
         cv2.destroyAllWindows()
 
     def connectwebcam(self):
+        self.stop_video = True
         self.stop_webcam = False
         self.grayscale_flag = False
         self.flip_flag = False

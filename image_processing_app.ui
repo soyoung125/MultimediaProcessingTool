@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -733,6 +733,9 @@ p, li { white-space: pre-wrap; }
       <property name="text">
        <string>TextLabel</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="lblVideo2">
       <property name="geometry">
@@ -745,6 +748,9 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>TextLabel</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btnGrayScale">
@@ -807,14 +813,14 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="btnCountPeople">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>40</y>
-        <width>100</width>
+        <x>110</x>
+        <y>60</y>
+        <width>151</width>
         <height>30</height>
        </rect>
       </property>
       <property name="text">
-       <string>Count People</string>
+       <string>Connect Webcam</string>
       </property>
      </widget>
      <widget class="QLabel" name="lblcount">
@@ -826,8 +832,16 @@ p, li { white-space: pre-wrap; }
         <height>521</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Press the &quot;Connect Webcam&quot; button to start counting people using your web cam. Press &quot;q&quot; to exit.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>

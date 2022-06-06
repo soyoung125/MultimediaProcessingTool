@@ -8,6 +8,7 @@ class VideoTransformationTap:
     def video_flip(self):
         import cv2
         self.grayscale_flag = False
+        self.flip_flag = False
 
         video = cv2.VideoCapture(self.video_source)
 
@@ -35,6 +36,7 @@ class VideoTransformationTap:
         cv2.destroyAllWindows()
 
     def webcam_flip(self):
+        self.grayscale_flag = False
         self.flip_flag = True
         direction = self.cnndgrees.currentText()
 
@@ -46,4 +48,5 @@ class VideoTransformationTap:
             self.angle = 270.0
 
     def grayscale(self):
+        self.flip_flag = False
         self.grayscale_flag = True
