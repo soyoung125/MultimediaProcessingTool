@@ -877,16 +877,43 @@ p, li { white-space: pre-wrap; }
         <x>110</x>
         <y>170</y>
         <width>1011</width>
-        <height>521</height>
+        <height>261</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>13</pointsize>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
        <string>Press the &quot;Connect Webcam&quot; button to start counting people using your web cam. Press &quot;q&quot; to exit.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>450</y>
+        <width>1011</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Start and end may be delayed.</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
