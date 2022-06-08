@@ -28,3 +28,34 @@
     cd yolov5
     pip install -qr requirements.txt
 을 터밀널에 입력합니다.
+
+## 구현 기능
+1. Showing the histogram of an image, convert to grayscale
+2. Enhance image quality using
+3. Saving an image to another formats
+4. Rotate, scaling, flip, warp, crop an image
+5. Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
+6. Counting person in a webcam using YOLO
+
+## 팀원
+- 경기대학교 컴퓨터공학부 [김가영](https://github.com/gykim0923) 
+    - Showing the histogram of an image, convert to grayscale
+    - Saving an image to another formats
+    - Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
+        - Flip the webcam
+
+
+- 경기대학교 컴퓨터공학부 [박소영](https://github.com/soyoung125)  
+    - Enhance image quality using
+        - Gamma Correction
+    - Rotate, scaling, flip, warp, crop an image
+    - Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
+        - Convert video, webcam to grayscale
+    - Counting person in a webcam using YOLO
+
+
+- 경기대학교 컴퓨터공학부 [최희정](https://github.com/choihj00)  
+    - Enhance image quality using
+        - Histogram Equalization
+    - Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
+        - Flip the video
