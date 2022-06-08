@@ -1,4 +1,6 @@
 # import OpenNewScreen
+import cv2
+import numpy as np
 from cv2 import imread
 from matplotlib import pyplot as plt
 
@@ -104,11 +106,12 @@ class ImprovementTab():
         self.show_image(self.lblImage2, img2)
 
     def click_crop(self):
-        img = imread(self.image_source)
-
         instance = OpenNewScreen()
 
         x1, y1, x2, y2 = instance.open_screen(self.image_source)
 
-        croped_img = img[y1:y2, x1:x2]
+        src = np.array(self.source_image)
+        croped_img = src[y1:y2, x1:x2]
+        croped_img = croped_img.astype(np.uint8)
+
         self.show_image(self.lblImage2, croped_img)
