@@ -21,15 +21,14 @@ class EnhanceTab():
         self.show_image(self.lblImage2_E, img2)
 
     def gamma_correction(self):
-        import cv2
         import numpy as np
         from matplotlib import pyplot as plt
         from skimage.io import imread
 
         gamma = self.dsGamma.value()
-        img = cv2.imread(self.image_source)
-        out = img.astype(np.float)
-        out = ((out / 255) ** (1 / gamma)) * 255
+        out = np.array(self.source_image)
+        invGamma = 1.0 / gamma
+        out = ((out / 255) ** invGamma) * 255
         out = out.astype(np.uint8)
 
         plt.figure(figsize=(6, 6))
