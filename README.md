@@ -46,7 +46,7 @@
 
 
 - 경기대학교 컴퓨터공학부 [박소영](https://github.com/soyoung125)  
-    - Enhance image quality using
+    - Enhance image quality using, Filter the image
         - Gamma Correction
     - Rotate, scaling, flip, warp, crop an image
     - Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
@@ -55,7 +55,8 @@
 
 
 - 경기대학교 컴퓨터공학부 [최희정](https://github.com/choihj00)  
-    - Enhance image quality using
+    - Enhance image quality, Filter the image
         - Histogram Equalization
+        - Filter the image with blurring, smoothing, sharpening.
     - Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
         - Flip the video
