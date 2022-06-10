@@ -8,7 +8,7 @@ class VideoTransformationTab:
     def video_flip(self):
         import cv2
         self.grayscale_flag = False
-        self.flip_flag = False
+        self.flip_flag = True
 
         video = cv2.VideoCapture(self.video_source)
 
@@ -22,6 +22,8 @@ class VideoTransformationTab:
             angle = 270.0
 
         while True:
+            if self.flip_flag == False:
+                break
             ret, video1 = video.read()
             video1 = cv2.cvtColor(video1, cv2.COLOR_BGR2RGB)
             resize_video = cv2.resize(video1, (540, 560), interpolation=cv2.INTER_CUBIC)
@@ -32,7 +34,7 @@ class VideoTransformationTab:
 
             cv2.waitKey(24)
 
-        cap.release()
+        video.release()
         cv2.destroyAllWindows()
 
     def webcam_flip(self):
