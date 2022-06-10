@@ -60,3 +60,14 @@
         - Filter the image with blurring, smoothing, sharpening.
     - Convert video, webcam to grayscale, flip the video/webcam (90, 180, 270 degrees)
         - Flip the video
+
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/77377583/173077172-6fc2f2fe-5c6c-4bab-83b3-79552311c33b.gif">
+    <img src="https://user-images.githubusercontent.com/77377583/173077157-12025388-a8fa-4941-82f5-f3253110f9a4.gif">
+    <img src="https://user-images.githubusercontent.com/77377583/173077303-29f28bf8-fbb7-4666-a999-1fa597bab490.gif">
+    <img src="https://user-images.githubusercontent.com/77377583/173077191-fefaafbc-9646-4981-915f-81a4b66037eb.gif">
+    <img src="https://user-images.githubusercontent.com/77377583/173077265-e34fd790-a253-4345-b20b-febf7b996e3f.gif">
+    <img src="https://user-images.githubusercontent.com/77377583/173077275-45fc40d4-bf84-4046-88e9-f12462afbce8.gif">
+    <img src="https://user-images.githubusercontent.com/77377583/173077282-c454aba4-55a5-4a1b-9030-9cbeea12c2b1.gif">
+</p>
